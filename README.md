@@ -76,5 +76,5 @@ acme.sh --issue --dns dns_pdns -d yourdomain.com --force
 No need to renew manually All certs will be renewed automatically every 30 days.
 However, you can force a renewal:
 ```bash
-acme.sh --renew -d example.com --force
+acme.sh --renew -d yourdomain.com --force
 ```
