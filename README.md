@@ -20,8 +20,6 @@ The token must have the following privileges:
 This token will be visible to anyone who has access to the server.  
 Create a dedicated role with only the required privileges for secure operation.
 
----
-
 # Step 3 – Configure Previder DNS
 First you need to login to your PowerDNS account to enable the API and set your API-Token in the configuration.
 ```bash
@@ -35,6 +33,6 @@ Replace `YOUR_API_KEY_HERE` with your actual API key.
 # Step 4 – Test the configuration (dry run)
 Ok, let's issue a cert now:
 ```bash
-./acme.sh --issue --dns dns_pdns -d example.com -d *.example.com
+./acme.sh --test --issue --dns dns_pdns -d example.com -d *.example.com 
 ```
 The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
