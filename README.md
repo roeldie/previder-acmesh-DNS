@@ -28,7 +28,7 @@ Create a dedicated role with only the required privileges for secure operation.
 ---
 
 ## Step 3 – Configure Previder DNS
-First you need to login to your PowerDNS account to enable the API and set your API-Token in the configuration.
+Enter the following in the terminal
 ```bash
 export PDNS_Url="https://portal.previder.com"
 export PDNS_ServerId="previder"
