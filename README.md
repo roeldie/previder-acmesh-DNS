@@ -32,8 +32,18 @@ export PDNS_Ttl=300
 Replace `YOUR_API_KEY_HERE` with your actual API key.
 
 # Step 4 – Test the configuration (dry run)
-Ok, let's issue a cert now:
+In the example below, we request a **wildcard certificate** (`*.yourdomain.com`).  
+A wildcard certificate is only required if you want to secure all subdomains.  
+If you do not need a wildcard certificate, you can simply remove the `-d "*.yourdomain.com"` line.
+
 ```bash
-./acme.sh --issue --dns dns_pdns -d example.com -d *.example.com --test 
+./acme.sh --issue --dns dns_pdns -d yourdomain.com -d *.yourdomain.com --test 
+```
+If you only need a certificate for the main domain:
+
+```bash
+./acme.sh --issue --dns dns_pdns -d yourdomain.com  --test 
 ```
 The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
+
+
