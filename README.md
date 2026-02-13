@@ -4,7 +4,7 @@ This guide explains how to use **acme DNS validation** in combination with **Pre
 
 ---
 
-# Step 1 – Install acme.sh
+## Step 1 – Install acme.sh
 
 ```bash
 curl https://get.acme.sh | sh -s email=my@example.com
@@ -27,7 +27,7 @@ Create a dedicated role with only the required privileges for secure operation.
 
 ---
 
-# Step 3 – Configure Previder DNS
+## Step 3 – Configure Previder DNS
 First you need to login to your PowerDNS account to enable the API and set your API-Token in the configuration.
 ```bash
 export PDNS_Url="https://portal.previder.com"
@@ -39,7 +39,7 @@ Replace `YOUR_API_KEY_HERE` with your actual API key.
 
 ---
 
-# Step 4 – Test the configuration (dry run)
+## Step 4 – Test the configuration (dry run)
 In the example below, we request a **wildcard certificate** (`*.yourdomain.com`).  
 A wildcard certificate is only required if you want to secure all subdomains.  
 If you do not need a wildcard certificate, you can simply remove the `-d *.yourdomain.com` line.
@@ -56,7 +56,7 @@ The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh
 
 ---
 
-# Step 5 – Request the certificate
+## Step 5 – Request the certificate
 
 If the dry run in Step 4 was successful, it is recommended to wait approximately **5 minutes** before requesting the actual certificate.  
 
