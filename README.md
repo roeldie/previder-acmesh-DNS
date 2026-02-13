@@ -10,8 +10,6 @@ curl https://get.acme.sh | sh -s email=my@example.com
 
 # Step 2 – Configure Previder DNS
 First you need to login to your PowerDNS account to enable the API and set your API-Token in the configuration.
-
-https://doc.powerdns.com/md/httpapi/README/
 ```bash
 export PDNS_Url="https://portal.previder.com"
 export PDNS_ServerId="previder"
