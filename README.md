@@ -7,6 +7,7 @@ This guide explains how to use **acme DNS validation** in combination with **Pre
 ```bash
 curl https://get.acme.sh | sh -s email=my@example.com
 ```
+Replace my@example.com with your actual email.
 
 ## Step 2 – Generate an API key
 
