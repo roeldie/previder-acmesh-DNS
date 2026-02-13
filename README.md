@@ -46,4 +46,19 @@ acme.sh --issue --dns dns_pdns -d yourdomain.com  --test
 ```
 The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
 
+# Step 5 – Request the certificate
 
+If the dry run in Step 4 was successful, it is recommended to wait approximately **5 minutes** before requesting the actual certificate.  
+
+The DNS TTL is set to **300 seconds (5 minutes)**, so waiting ensures that any previous DNS challenge records have fully expired and prevents potential validation issues.
+
+Wildcard example:
+
+```bash
+acme.sh --issue --dns dns_pdns -d yourdomain.com -d *.yourdomain.com
+```
+If you only need a certificate for the main domain:
+
+```bash
+acme.sh --issue --dns dns_pdns -d yourdomain.com 
+```
