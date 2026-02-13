@@ -20,6 +20,9 @@ export PDNS_Ttl=60
 ```
 Replace `YOUR_API_KEY_HERE` with your actual API key.
 
+# Step 3 – Test the configuration (dry run)
 Ok, let's issue a cert now:
+```bash
 ./acme.sh --issue --dns dns_pdns -d example.com -d *.example.com
+```
 The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
