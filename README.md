@@ -55,10 +55,10 @@ The DNS TTL is set to **300 seconds (5 minutes)**, so waiting ensures that any p
 Wildcard example:
 
 ```bash
-acme.sh --issue --dns dns_pdns -d yourdomain.com -d *.yourdomain.com
+acme.sh --issue --dns dns_pdns -d yourdomain.com -d *.yourdomain.com --force
 ```
 If you only need a certificate for the main domain:
 
 ```bash
-acme.sh --issue --dns dns_pdns -d yourdomain.com 
+acme.sh --issue --dns dns_pdns -d yourdomain.com --force
 ```
