@@ -8,5 +8,16 @@ This guide explains how to use **acme DNS validation** in combination with **Pre
 curl https://get.acme.sh | sh -s email=my@example.com
 ```
 
+# Step 2 – Use PowerDNS embedded API to automatically issue cert
+First you need to login to your PowerDNS account to enable the API and set your API-Token in the configuration.
 
----
+https://doc.powerdns.com/md/httpapi/README/
+```bash
+export PDNS_Url="https://portal.previder.com"
+export PDNS_ServerId="previder"
+export PDNS_Token="0123456789ABCDEF"
+export PDNS_Ttl=60
+```
+Ok, let's issue a cert now:
+./acme.sh --issue --dns dns_pdns -d example.com -d *.example.com
+The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
