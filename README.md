@@ -27,13 +27,13 @@ First you need to login to your PowerDNS account to enable the API and set your 
 export PDNS_Url="https://portal.previder.com"
 export PDNS_ServerId="previder"
 export PDNS_Token="YOUR_API_KEY_HERE"
-export PDNS_Ttl=60
+export PDNS_Ttl=300
 ```
 Replace `YOUR_API_KEY_HERE` with your actual API key.
 
 # Step 4 – Test the configuration (dry run)
 Ok, let's issue a cert now:
 ```bash
-./acme.sh --test --issue --dns dns_pdns -d example.com -d *.example.com 
+./acme.sh --issue --dns dns_pdns -d example.com -d *.example.com --test 
 ```
 The PDNS_Url, PDNS_ServerId, PDNS_Token and PDNS_Ttl will be saved in ~/.acme.sh/account.conf and will be reused when needed.
