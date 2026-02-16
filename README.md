@@ -73,6 +73,9 @@ If you only need a certificate for the main domain:
 acme.sh --issue --dns dns_pdns -d yourdomain.com --force
 ```
 ---
+[Install](https://github.com/acmesh-official/acme.sh?tab=readme-ov-file#3%EF%B8%8F%E2%83%A3-install-the-certificate-to-apachenginx) the Certificate to Apache/Nginx
+
+---
 No need to renew manually All certs will be renewed automatically every 30 days.
 However, you can force a renewal:
 ```bash
