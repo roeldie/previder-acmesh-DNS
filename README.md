@@ -43,7 +43,7 @@ Replace `YOUR_API_KEY_HERE` with your actual API key.
 In the example below, we request a **wildcard certificate** (`*.yourdomain.com`).  
 A wildcard certificate is only required if you want to secure all subdomains.  
 If you do not need a wildcard certificate, you can simply remove the `-d *.yourdomain.com` line.
-If you want to use letsencrypt add --server letsencrypt 
+If you want to use letsencrypt add --server letsencrypt.
 
 ```bash
 acme.sh --issue --dns dns_pdns -d yourdomain.com -d *.yourdomain.com --test 
