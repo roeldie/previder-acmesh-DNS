@@ -75,6 +75,9 @@ If you only need a certificate for the main domain:
 acme.sh --issue --dns dns_pdns -d yourdomain.com --force
 ```
 ---
+
+## Step 6 – Install the certificate
+
 [Install](https://github.com/acmesh-official/acme.sh?tab=readme-ov-file#3%EF%B8%8F%E2%83%A3-install-the-certificate-to-apachenginx) the Certificate to Apache/Nginx
 
 ---
